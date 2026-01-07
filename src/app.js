@@ -28,7 +28,7 @@ app.use("/", userroutes)
 
 app.get("/", (req,res)=>{
     console.log("hello");
-    res.send("hello")
+    res.send("bye bye")
 })
 
 
