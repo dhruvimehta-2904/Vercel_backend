@@ -9,8 +9,14 @@ const {notFound, errorHandler} = require("../Middleware/errorHandling")
 const {chats} = require("../data/chats")
 const port = process.env.PORT || 3000
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://vercel-frontend-e9tp.vercel.app"
+];
+
+
 app.use(cors({
-    origin:"http://localhost:5173",
+   origin: allowedOrigins,
     methods:["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials:true
 }))
